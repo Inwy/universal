@@ -38,23 +38,23 @@ int main (int argc, char *argv[]) {
     }
 
     /* Fork off the parent process */
-    pid = fork();
+    //pid = fork();
 
     /* If we got a good PID, then we can exit the parent process. */
-    if (pid > 0) {
+    /*if (pid > 0) {
         exit(EXIT_SUCCESS);
-    }
+    }*/
 
     /* If forking actually didn't work */
-    if (pid < 0) {
+    //if (pid < 0) {
         /* Create a new SID for the child process */
-        sid = setsid();
+        //sid = setsid();
 
         /* Close out the standard file descriptors */
-        close(STDIN_FILENO);
-        close(STDOUT_FILENO);
-        close(STDERR_FILENO);
-    }
+        //close(STDIN_FILENO);
+        //close(STDOUT_FILENO);
+        //close(STDERR_FILENO);
+    //}
 
     chdir("/var/empty");
 
